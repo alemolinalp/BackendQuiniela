@@ -1,0 +1,306 @@
+Started GET "/" for 127.0.0.1 at 2018-05-29 09:33:16 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexandramolina/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexandramolina/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (7.6ms)
+Completed 200 OK in 49ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateEquipos (20180529160724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "equipos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "codigo" varchar, "nombre" varchar, "idGrupo" integer, "puntos" integer, "partidosJugados" integer, "partidosGanados" integer, "partidosEmpatados" integer, "partidosPerdidos" integer, "golesFavor" integer, "golesContra" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180529160724_create_equipos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529160724"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateGrupos (20180529161257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateGrupos (20180529161257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateGrupos (20180529161257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180529161257_create_grupos.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "grupos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180529161257_create_grupos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529161257"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-29 16:16:40.386981"], ["updated_at", "2018-05-29 16:16:40.386981"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.4ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "A"], ["created_at", "2018-05-29 16:23:38.280316"], ["updated_at", "2018-05-29 16:23:38.280316"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (1.0ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "B"], ["created_at", "2018-05-29 16:23:59.803561"], ["updated_at", "2018-05-29 16:23:59.803561"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.5ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "C"], ["created_at", "2018-05-29 16:24:31.855733"], ["updated_at", "2018-05-29 16:24:31.855733"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.5ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "D"], ["created_at", "2018-05-29 16:24:34.599730"], ["updated_at", "2018-05-29 16:24:34.599730"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.5ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "E"], ["created_at", "2018-05-29 16:24:37.278178"], ["updated_at", "2018-05-29 16:24:37.278178"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.5ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "F"], ["created_at", "2018-05-29 16:24:41.493617"], ["updated_at", "2018-05-29 16:24:41.493617"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.5ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "G"], ["created_at", "2018-05-29 16:24:44.355450"], ["updated_at", "2018-05-29 16:24:44.355450"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGrupo Create (0.7ms)[0m  [1m[32mINSERT INTO "grupos" ("codigo", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["codigo", "H"], ["created_at", "2018-05-29 16:24:46.952591"], ["updated_at", "2018-05-29 16:24:46.952591"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddEquipos (20180529191948)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mEquipo Create (0.4ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "RUS"], ["nombre", "Rusia"], ["idGrupo", 1], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.339477"], ["updated_at", "2018-05-29 19:43:56.339477"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:3
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "KSA"], ["nombre", "Saudi Arabia"], ["idGrupo", 1], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.341187"], ["updated_at", "2018-05-29 19:43:56.341187"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:4
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "EGY"], ["nombre", "Egipto"], ["idGrupo", 1], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.342194"], ["updated_at", "2018-05-29 19:43:56.342194"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:5
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "URU"], ["nombre", "Uruguay"], ["idGrupo", 1], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.343525"], ["updated_at", "2018-05-29 19:43:56.343525"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:6
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "POR"], ["nombre", "Portugal"], ["idGrupo", 2], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.344890"], ["updated_at", "2018-05-29 19:43:56.344890"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:7
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "ESP"], ["nombre", "España"], ["idGrupo", 2], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.346287"], ["updated_at", "2018-05-29 19:43:56.346287"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:8
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "MAR"], ["nombre", "Marruecos"], ["idGrupo", 2], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.347711"], ["updated_at", "2018-05-29 19:43:56.347711"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:9
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "IRN"], ["nombre", "Irán"], ["idGrupo", 2], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.349356"], ["updated_at", "2018-05-29 19:43:56.349356"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:10
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "FRA"], ["nombre", "Francia"], ["idGrupo", 3], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.350418"], ["updated_at", "2018-05-29 19:43:56.350418"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:11
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "AUS"], ["nombre", "Australia"], ["idGrupo", 3], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.351388"], ["updated_at", "2018-05-29 19:43:56.351388"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:12
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "PER"], ["nombre", "Perú"], ["idGrupo", 3], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.352914"], ["updated_at", "2018-05-29 19:43:56.352914"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:13
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "DEN"], ["nombre", "Dinamarca"], ["idGrupo", 3], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.353965"], ["updated_at", "2018-05-29 19:43:56.353965"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:14
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "ARG"], ["nombre", "Argentina"], ["idGrupo", 4], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.354937"], ["updated_at", "2018-05-29 19:43:56.354937"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:15
+  [1m[36mEquipo Create (0.3ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "ISL"], ["nombre", "Islandia"], ["idGrupo", 4], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.356386"], ["updated_at", "2018-05-29 19:43:56.356386"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:16
+  [1m[36mEquipo Create (0.2ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "CRO"], ["nombre", "Croacia"], ["idGrupo", 4], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.359478"], ["updated_at", "2018-05-29 19:43:56.359478"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:17
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "NGA"], ["nombre", "Nigeria"], ["idGrupo", 4], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.360794"], ["updated_at", "2018-05-29 19:43:56.360794"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:18
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "BRA"], ["nombre", "Brasil"], ["idGrupo", 5], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.361843"], ["updated_at", "2018-05-29 19:43:56.361843"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:19
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "SUI"], ["nombre", "Suiza"], ["idGrupo", 5], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.363280"], ["updated_at", "2018-05-29 19:43:56.363280"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:20
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "CRC"], ["nombre", "Costa Rica"], ["idGrupo", 5], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.364335"], ["updated_at", "2018-05-29 19:43:56.364335"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:21
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "SRB"], ["nombre", "Serbia"], ["idGrupo", 5], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.365306"], ["updated_at", "2018-05-29 19:43:56.365306"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:22
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "GER"], ["nombre", "Alemania"], ["idGrupo", 6], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.366255"], ["updated_at", "2018-05-29 19:43:56.366255"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:23
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "MEX"], ["nombre", "México"], ["idGrupo", 6], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.367250"], ["updated_at", "2018-05-29 19:43:56.367250"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:24
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "SWE"], ["nombre", "Suecia"], ["idGrupo", 6], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.368232"], ["updated_at", "2018-05-29 19:43:56.368232"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:25
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "KOR"], ["nombre", "Corea del Sur"], ["idGrupo", 6], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.369398"], ["updated_at", "2018-05-29 19:43:56.369398"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:26
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "BEL"], ["nombre", "Bélgica"], ["idGrupo", 7], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.370457"], ["updated_at", "2018-05-29 19:43:56.370457"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:27
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "PAN"], ["nombre", "Panamá"], ["idGrupo", 7], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.371435"], ["updated_at", "2018-05-29 19:43:56.371435"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:28
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "TUN"], ["nombre", "Túnez"], ["idGrupo", 7], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.372477"], ["updated_at", "2018-05-29 19:43:56.372477"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:29
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "ENG"], ["nombre", "Inglaterra"], ["idGrupo", 7], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.373511"], ["updated_at", "2018-05-29 19:43:56.373511"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:30
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "POL"], ["nombre", "Polonia"], ["idGrupo", 8], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.374507"], ["updated_at", "2018-05-29 19:43:56.374507"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:31
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "SEN"], ["nombre", "Senegal"], ["idGrupo", 8], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.375576"], ["updated_at", "2018-05-29 19:43:56.375576"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:32
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "COL"], ["nombre", "Colombia"], ["idGrupo", 8], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.376561"], ["updated_at", "2018-05-29 19:43:56.376561"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:33
+  [1m[36mEquipo Create (0.1ms)[0m  [1m[32mINSERT INTO "equipos" ("codigo", "nombre", "idGrupo", "puntos", "partidosJugados", "partidosGanados", "partidosEmpatados", "partidosPerdidos", "golesFavor", "golesContra", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["codigo", "JPN"], ["nombre", "Japón"], ["idGrupo", 8], ["puntos", 0], ["partidosJugados", 0], ["partidosGanados", 0], ["partidosEmpatados", 0], ["partidosPerdidos", 0], ["golesFavor", 0], ["golesContra", 0], ["created_at", "2018-05-29 19:43:56.377513"], ["updated_at", "2018-05-29 19:43:56.377513"]]
+  ↳ db/migrate/20180529191948_add_equipos.rb:34
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529191948"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mEquipo Load (0.2ms)[0m  [1m[34mSELECT  "equipos".* FROM "equipos" ORDER BY "equipos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEquipo Load (0.9ms)[0m  [1m[34mSELECT  "equipos".* FROM "equipos" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEquipo Load (0.3ms)[0m  [1m[34mSELECT  "equipos".* FROM "equipos" WHERE "equipos"."codigo" = ? LIMIT ?[0m  [["codigo", "CRC"], ["LIMIT", 1]]
+  [1m[36mPartido Load (1.2ms)[0m  [1m[34mSELECT  "partidos".* FROM "partidos" ORDER BY "partidos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPartido Load (1.5ms)[0m  [1m[34mSELECT  "partidos".* FROM "partidos" ORDER BY "partidos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPartido Load (0.8ms)[0m  [1m[34mSELECT  "partidos".* FROM "partidos" ORDER BY "partidos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreatePartidos (20180530003512)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180530003512_create_partidos.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "partidos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "equipo1" varchar, "equipo2" varchar, "resultado" integer, "golesEquipo1" integer, "golesEquipo2" integer, "fecha" varchar, "lugar" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180530003512_create_partidos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180530003512"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to AddPartidos (20180530025942)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mPartido Create (0.5ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Rusia"], ["equipo2", "Arabia Saudita"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.063410"], ["updated_at", "2018-05-30 04:11:10.063410"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:3
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Egipto"], ["equipo2", "Uruguay"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.065747"], ["updated_at", "2018-05-30 04:11:10.065747"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:4
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Rusia"], ["equipo2", "Egipto"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.067199"], ["updated_at", "2018-05-30 04:11:10.067199"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:5
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Uruguay"], ["equipo2", "Arabia Saudita"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.068438"], ["updated_at", "2018-05-30 04:11:10.068438"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:6
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Uruguay"], ["equipo2", "Rusia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.069828"], ["updated_at", "2018-05-30 04:11:10.069828"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:7
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Arabia Saudita"], ["equipo2", "Egipto"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.070941"], ["updated_at", "2018-05-30 04:11:10.070941"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:8
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Marruecos"], ["equipo2", "Irán"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.071951"], ["updated_at", "2018-05-30 04:11:10.071951"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:9
+  [1m[36mPartido Create (0.3ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Portugal"], ["equipo2", "España"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.072914"], ["updated_at", "2018-05-30 04:11:10.072914"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:10
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Portugal"], ["equipo2", "Marruecos"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.074415"], ["updated_at", "2018-05-30 04:11:10.074415"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:11
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Irán"], ["equipo2", "España"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.075804"], ["updated_at", "2018-05-30 04:11:10.075804"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:12
+  [1m[36mPartido Create (0.2ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "España"], ["equipo2", "Marruecos"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.077135"], ["updated_at", "2018-05-30 04:11:10.077135"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:13
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Irán"], ["equipo2", "Portugal"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.078775"], ["updated_at", "2018-05-30 04:11:10.078775"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:14
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Francia"], ["equipo2", "Australia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.080345"], ["updated_at", "2018-05-30 04:11:10.080345"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:15
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Perú"], ["equipo2", "Dinamarca"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.081301"], ["updated_at", "2018-05-30 04:11:10.081301"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:16
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Francia"], ["equipo2", "Perú"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.082488"], ["updated_at", "2018-05-30 04:11:10.082488"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:17
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Dinamarca"], ["equipo2", "Australia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.083435"], ["updated_at", "2018-05-30 04:11:10.083435"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:18
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Dinamarca"], ["equipo2", "Francia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.084339"], ["updated_at", "2018-05-30 04:11:10.084339"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:19
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Australia"], ["equipo2", "Perú"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.085241"], ["updated_at", "2018-05-30 04:11:10.085241"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:20
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Argentina"], ["equipo2", "Islandia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.086139"], ["updated_at", "2018-05-30 04:11:10.086139"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:21
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Croacia"], ["equipo2", "Nigeria"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.087027"], ["updated_at", "2018-05-30 04:11:10.087027"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:22
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Argentina"], ["equipo2", "Croacia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.088204"], ["updated_at", "2018-05-30 04:11:10.088204"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:23
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Nigeria"], ["equipo2", "Islandia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.089591"], ["updated_at", "2018-05-30 04:11:10.089591"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:24
+  [1m[36mPartido Create (0.3ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Islandia"], ["equipo2", "Croacia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.091814"], ["updated_at", "2018-05-30 04:11:10.091814"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:25
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Nigeria"], ["equipo2", "Argentina"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.094018"], ["updated_at", "2018-05-30 04:11:10.094018"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:26
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Costa Rica"], ["equipo2", "Serbia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.095414"], ["updated_at", "2018-05-30 04:11:10.095414"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:27
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Brasil"], ["equipo2", "Suiza"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.096379"], ["updated_at", "2018-05-30 04:11:10.096379"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:28
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Brasil"], ["equipo2", "Costa Rica"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.097282"], ["updated_at", "2018-05-30 04:11:10.097282"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:29
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Serbia"], ["equipo2", "Suiza"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.098199"], ["updated_at", "2018-05-30 04:11:10.098199"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:30
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Serbia"], ["equipo2", "Brasil"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.099141"], ["updated_at", "2018-05-30 04:11:10.099141"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:31
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Suiza"], ["equipo2", "Costa Rica"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.100014"], ["updated_at", "2018-05-30 04:11:10.100014"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:32
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Alemania"], ["equipo2", "México"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.101072"], ["updated_at", "2018-05-30 04:11:10.101072"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:33
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Suecia"], ["equipo2", "Corea del Sur"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.102021"], ["updated_at", "2018-05-30 04:11:10.102021"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:34
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Alemania"], ["equipo2", "Suecia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.102869"], ["updated_at", "2018-05-30 04:11:10.102869"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:35
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Corea del Sur"], ["equipo2", "México"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.103753"], ["updated_at", "2018-05-30 04:11:10.103753"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:36
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "México"], ["equipo2", "Suecia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.104612"], ["updated_at", "2018-05-30 04:11:10.104612"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:37
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Corea del Sur"], ["equipo2", "Alemania"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.105514"], ["updated_at", "2018-05-30 04:11:10.105514"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:38
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Bélgica"], ["equipo2", "Panamá"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.107166"], ["updated_at", "2018-05-30 04:11:10.107166"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:39
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Túnez"], ["equipo2", "Inglaterra"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.108278"], ["updated_at", "2018-05-30 04:11:10.108278"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:40
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Bélgica"], ["equipo2", "Túnez"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.109393"], ["updated_at", "2018-05-30 04:11:10.109393"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:41
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Inglaterra"], ["equipo2", "Panamá"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.110634"], ["updated_at", "2018-05-30 04:11:10.110634"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:42
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Inglaterra"], ["equipo2", "Bélgica"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.111587"], ["updated_at", "2018-05-30 04:11:10.111587"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:43
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Panamá"], ["equipo2", "Túnez"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.112458"], ["updated_at", "2018-05-30 04:11:10.112458"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:44
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Polonia"], ["equipo2", "Senegal"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.113358"], ["updated_at", "2018-05-30 04:11:10.113358"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:45
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Colombia"], ["equipo2", "Japón"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.114261"], ["updated_at", "2018-05-30 04:11:10.114261"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:46
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Japón"], ["equipo2", "Senegal"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.115142"], ["updated_at", "2018-05-30 04:11:10.115142"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:47
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Polonia"], ["equipo2", "Colombia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.116010"], ["updated_at", "2018-05-30 04:11:10.116010"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:48
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Senegal"], ["equipo2", "Colombia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.117845"], ["updated_at", "2018-05-30 04:11:10.117845"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:49
+  [1m[36mPartido Create (0.1ms)[0m  [1m[32mINSERT INTO "partidos" ("equipo1", "equipo2", "resultado", "golesEquipo1", "golesEquipo2", "fecha", "lugar", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["equipo1", "Japón"], ["equipo2", "Polonia"], ["resultado", 0], ["golesEquipo1", 0], ["golesEquipo2", 0], ["fecha", "0"], ["lugar", "0"], ["created_at", "2018-05-30 04:11:10.118857"], ["updated_at", "2018-05-30 04:11:10.118857"]]
+  ↳ db/migrate/20180530025942_add_partidos.rb:50
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180530025942"]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alexandramolina/.rvm/gems/ruby-2.5.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mPartido Load (0.2ms)[0m  [1m[34mSELECT  "partidos".* FROM "partidos" ORDER BY "partidos"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPartido Load (0.6ms)[0m  [1m[34mSELECT  "partidos".* FROM "partidos" LIMIT ?[0m  [["LIMIT", 11]]
