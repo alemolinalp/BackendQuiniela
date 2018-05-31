@@ -1,0 +1,2 @@
+class ResultadoJuego < ApplicationRecord
+end
