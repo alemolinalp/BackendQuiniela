@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_31_152032) do
+ActiveRecord::Schema.define(version: 2018_05_31_164735) do
 
   create_table "equipos", force: :cascade do |t|
     t.string "codigo"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2018_05_31_152032) do
     t.integer "partidosPerdidos"
     t.integer "golesFavor"
     t.integer "golesContra"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "equipoxusuarios", force: :cascade do |t|
+    t.integer "idUsuario"
+    t.integer "idEquipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,6 +55,33 @@ ActiveRecord::Schema.define(version: 2018_05_31_152032) do
     t.integer "golesEquipo2"
     t.string "fecha"
     t.string "lugar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resultado_juegos", force: :cascade do |t|
+    t.integer "idUsuario"
+    t.integer "idJuego"
+    t.integer "idPartido"
+    t.integer "prediccion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string "nombre"
+    t.string "email"
+    t.string "contrasena"
+    t.string "foto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "authentication_token"
+  end
+
+  create_table "usuarioxjuegos", force: :cascade do |t|
+    t.integer "idUsuario"
+    t.integer "idJuego"
+    t.integer "aciertos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

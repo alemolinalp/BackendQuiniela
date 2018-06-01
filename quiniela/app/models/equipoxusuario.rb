@@ -1,0 +1,2 @@
+class Equipoxusuario < ApplicationRecord
+end
