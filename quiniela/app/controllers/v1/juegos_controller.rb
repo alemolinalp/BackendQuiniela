@@ -78,9 +78,42 @@ class V1::JuegosController < ApplicationController
 
       usuarioJuego = Usuarioxjuego.where(idUsuario: params[:id])
 
-      quinielas = Usuarioxjuego.joins(:juegos).where(juegos: {idJuego: usuarioJuego.idJuego})
+      quinielas = []
 
-      render json:{status: "Success", message: "Quinielas del usuario", data: usuarioJuego}, status: :ok
+      usuarioJuego.each do |item|
+        juegos = Juego.where(id: item.idJuego)
+        quinielas.push(juegos)
+      end
+
+      render json:{status: "Success", message: "Quinielas del usuario", data: quinielas, authentication_token: usuario.authentication_token}, status: :ok
+    else
+      render json:{status: "Error", message: "Token invalido"}, status: :bad
+    end
+  end
+
+  #Obtener participantes por quiniela
+  def obtenerParticipantes
+    usuario = Usuario.where(id: params[:id]).first
+
+    token = params[:authentication_token]
+
+    if(usuario.authentication_token == token)
+      #Por seguridad se le cambia el authentication token al usuario
+      random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      rand = (0...20).map{random[rand(random.length)]}.join
+      usuario.authentication_token = rand
+      usuario.save
+
+      usuarioJuego = Usuarioxjuego.where(idJuego: params[:idQuiniela])
+
+      quinielas = []
+
+      usuarioJuego.each do |item|
+        usuarios = Usuario.where(id: item.idUsuario)
+        quinielas.push(usuarios)
+      end
+
+      render json:{status: "Success", message: "Quinielas del usuario", data: quinielas, authentication_token: usuario.authentication_token}, status: :ok
     else
       render json:{status: "Error", message: "Token invalido"}, status: :bad
     end

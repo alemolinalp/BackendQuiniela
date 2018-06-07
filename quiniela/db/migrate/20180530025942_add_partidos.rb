@@ -1,6 +1,6 @@
 class AddPartidos < ActiveRecord::Migration[5.2]
   def up
-    Partido.create(equipo1: "Rusia", equipo2: "Arabia Saudita", resultado: 0, golesEquipo1: 0, golesEquipo2: 0, fecha: 0, lugar: 0)
+    Partido.create(equipo1: "Rusia", equipo2: "Arabia Saudita", resultado: 0, golesEquipo1: 0, golesEquipo2: 0, fecha: "14 Jun 2018 - 18:00 Local time", lugar: "Luzhniki Stadium Moscow")
     Partido.create(equipo1: "Egipto", equipo2: "Uruguay", resultado: 0, golesEquipo1: 0, golesEquipo2: 0, fecha: 0, lugar: 0)
     Partido.create(equipo1: "Rusia", equipo2: "Egipto", resultado: 0, golesEquipo1: 0, golesEquipo2: 0, fecha: 0, lugar: 0)
     Partido.create(equipo1: "Uruguay", equipo2: "Arabia Saudita", resultado: 0, golesEquipo1: 0, golesEquipo2: 0, fecha: 0, lugar: 0)

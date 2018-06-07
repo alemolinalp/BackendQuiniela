@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_04_222132) do
+ActiveRecord::Schema.define(version: 2018_06_07_005010) do
 
   create_table "equipos", force: :cascade do |t|
     t.string "codigo"
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 2018_06_04_222132) do
     t.integer "idPropietario"
     t.integer "monto"
     t.string "codigo"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer "equipo1"
+    t.integer "equipo2"
+    t.integer "resultado"
+    t.integer "golesEquipo1"
+    t.integer "golesEquipo2"
+    t.string "fecha"
+    t.string "lugar"
+    t.integer "finalizado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "partidos", force: :cascade do |t|
