@@ -118,4 +118,52 @@ class V1::JuegosController < ApplicationController
       render json:{status: "Error", message: "Token invalido"}, status: :bad
     end
   end
+
+  #Actualizar aciertos
+  def actualizar
+    usuario = Usuario.where(id: params[:idUsuario]).first
+
+    token = params[:authentication_token]
+
+    if(usuario.authentication_token == token)
+      #Por seguridad se le cambia el authentication token al usuario
+      random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      rand = (0...20).map{random[rand(random.length)]}.join
+      usuario.authentication_token = rand
+      usuario.save
+
+      resultados = ResultadoJuego.where(idJuego: params[:idQuiniela])
+
+      lista = []
+
+      resultados.each do |item|
+        juegousuario = Usuarioxjuego.where(idJuego: params[:idQuiniela]).where(idUsuario: item.idUsuario).first
+        juegousuario.aciertos = 0
+        juegousuario.save
+      end
+
+      resultados.each do |item|
+        juegousuario = Usuarioxjuego.where(idJuego: params[:idQuiniela]).where(idUsuario: item.idUsuario).first
+
+        partido = Match.where(id: item.idPartido).first
+
+        if(partido.resultado != 0)
+          lista.push(partido)
+          if(item.prediccion == partido.resultado)
+            juegousuario.aciertos += 1
+            juegousuario.save
+          end
+        end
+
+      end
+
+      usuariojuegos = Usuarioxjuego.where(idJuego: params[:idQuiniela])
+
+      render json:{status: "Success", message: "Aciertos", data: usuariojuegos, authentication_token: usuario.authentication_token}, status: :ok
+
+    else
+      render json:{status: "Error", message: "Token invalido"}, status: :bad
+    end
+
+  end
 end
