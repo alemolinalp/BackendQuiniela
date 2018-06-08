@@ -17,6 +17,7 @@ class V1::UsuariosController < ApplicationController
       end
     end
   end
+
   def login
     usuario = Usuario.where(email: params[:email]).first
     contrasena = params[:contrasena]
@@ -29,10 +30,66 @@ class V1::UsuariosController < ApplicationController
         usuario.save
         render json:{status: "Success", message: "Log in", data: usuario}, status: :created
       else
-        render json:{status: "Error", message: "Incorrect Password"}, status: :bad
+        render json:{status: "Error", message: "Incorrect Password"}, status: :ok
       end
     else
-      render json:{status: "Error", message: "Usuario no existe"}, status: :bad
+      render json:{status: "Error", message: "Usuario no existe"}, status: :ok
     end
+  end
+
+  #Seguir un equipo
+  def seguir
+    usuario = Usuario.where(id: params[:idUsuario]).first
+
+    token = params[:authentication_token]
+
+    if(usuario.authentication_token == token)
+      #Por seguridad se le cambia el authentication token al usuario
+      random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      rand = (0...20).map{random[rand(random.length)]}.join
+      usuario.authentication_token = rand
+      usuario.save
+
+      equipoxusuario = Equipoxusuario.where(idUsuario: params[:idUsuario]).first
+
+      if equipoxusuario
+        equipoxusuario.idEquipo = params[:idEquipo]
+        equipoxusuario.save
+      else
+        equipoxusuario = Equipoxusuario.new(idUsuario: params[:idUsuario], idEquipo: params[:idEquipo])
+        equipoxusuario.save
+      end
+
+      render json:{status: "Success", message: "Seguir equipo", data: equipoxusuario, authentication_token: usuario.authentication_token}, status: :ok
+
+    else
+      render json:{status: "Error", message: "Token invalido"}, status: :bad
+    end
+
+  end
+
+  #Devolver el equipo que sigue
+  def equipo
+    usuario = Usuario.where(id: params[:idUsuario]).first
+
+    token = params[:authentication_token]
+
+    if(usuario.authentication_token == token)
+      #Por seguridad se le cambia el authentication token al usuario
+      random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      rand = (0...20).map{random[rand(random.length)]}.join
+      usuario.authentication_token = rand
+      usuario.save
+
+      usuarioEquipo = Equipoxusuario.where(idUsuario: params[:idUsuario]).first
+
+      equipo = Equipo.where(id: usuarioEquipo.idEquipo)
+
+      render json:{status: "Success", message: "Devolver equipo", data: equipo, authentication_token: usuario.authentication_token}, status: :ok
+
+    else
+      render json:{status: "Error", message: "Token invalido"}, status: :bad
+    end
+
   end
 end

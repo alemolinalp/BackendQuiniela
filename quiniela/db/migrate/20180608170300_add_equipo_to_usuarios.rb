@@ -1,0 +1,5 @@
+class AddEquipoToUsuarios < ActiveRecord::Migration[5.2]
+  def change
+    add_column :usuarios, :equipo, :integer
+  end
+end
