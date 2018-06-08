@@ -26,7 +26,7 @@ class V1::JuegosController < ApplicationController
         usuarioJuego.save
         render json:{status: "Success", message: "Quiniela creada", data: juego, authentication_token: usuario.authentication_token}, status: :created
       else
-        render json:{status: "Error", message: "No se pudo crear quiniela"}, status: :bad
+        render json:{status: "Error", message: "No se pudo crear quiniela"}, status: :ok
       end
     else
       render json:{status: "Error", message: "Token invalido"}, status: :bad
@@ -46,18 +46,20 @@ class V1::JuegosController < ApplicationController
       usuario.authentication_token = rand
       usuario.save
 
-      juego= Juego.where(codigo: params[:codigo]).first
-
-      if juego
-
-        juegoUsuario = Usuarioxjuego.new(idUsuario: params[:id], idJuego: juego.id, aciertos: 0)
-        juegoUsuario.save
-
-        render json:{status: "Success", message: "Usuario unido a quiniela", data: juegoUsuario}, status: :created
+      usuarioJuego = Usuarioxjuego.where(idUsuario: params[:id])
+      if usuarioJuego
+        render json:{status: "Error", message: "El usuario ya esta unido a esa quiniela"}, status: :ok
       else
-        render json:{status: "Error", message: "No existe una quiniela con ese codigo"}, status: :bad
-      end
+        juego= Juego.where(codigo: params[:codigo]).first
 
+        if juego
+          juegoUsuario = Usuarioxjuego.new(idUsuario: params[:id], idJuego: juego.id, aciertos: 0)
+          juegoUsuario.save
+          render json:{status: "Success", message: "Usuario unido a quiniela", data: juegoUsuario, authentication_token: usuario.authentication_token}, status: :created
+        else
+          render json:{status: "Error", message: "No existe una quiniela con ese codigo"}, status: :ok
+        end
+      end
     else
       render json:{status: "Error", message: "Token invalido"}, status: :bad
     end

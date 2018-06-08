@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     post 'partidos/ingresarResultado', to: 'partidos#ingresarResultado'
     post 'partidos/reset', to: 'partidos#reset'
     post 'juegos/actualizar', to: 'juegos#actualizar'
+    post 'usuarios/seguir', to: 'usuarios#seguir'
+    get 'usuarios/equipo', to: 'usuarios#equipo'
   end
 
 end
