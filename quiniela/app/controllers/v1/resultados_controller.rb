@@ -4,27 +4,31 @@ class V1::ResultadosController < ApplicationController
   def create
     usuario = Usuario.where(id: params[:idUsuario]).first
 
-    token = params[:authentication_token]
 
-    if(usuario.authentication_token == token)
+    #token = params[:authentication_token]
 
-      random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
-      rand = (0...20).map{random[rand(random.length)]}.join
+    #if(usuario.authentication_token == token)
 
-      r = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
-      codigo = (0...5).map{r[rand(r.length)]}.join
+      #random = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      #rand = (0...20).map{random[rand(random.length)]}.join
 
-      usuario.authentication_token = rand
-      usuario.save
+      #r = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      #codigo = (0...5).map{r[rand(r.length)]}.join
+
+      #usuario.authentication_token = rand
+      #usuario.save
+
 
       resultado = ResultadoJuego.new(idUsuario: params[:idUsuario], idJuego: params[:idJuego], idPartido: params[:idPartido], prediccion: params[:prediccion])
       resultado.save
 
-      render json:{status: "Success", message: "Resultado creado", data: resultado, authentication_token: usuario.authentication_token}, status: :created
+      #render json:{status: "Success", message: "Resultado creado", data: resultado, authentication_token: usuario.authentication_token}, status: :created
+      render json:{status: "Success", message: "Resultado creado", data: resultado}, status: :created
 
-    else
-      render json:{status: "Error", message: "Token invalido"}, status: :bad
-    end
+    #else
+      #render json:{status: "Error", message: "Token invalido"}, status: :bad
+  #end
+
 
   end
 
