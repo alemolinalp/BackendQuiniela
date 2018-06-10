@@ -92,4 +92,21 @@ class V1::UsuariosController < ApplicationController
     end
 
   end
+
+  #Facebook
+  def fb
+    user= Usuario.where(email: params[:email]).first
+
+    if user
+      render json:{status: "Success", message: "Iniciar Sesión", data: user}, status: :ok
+    else
+      user = Usuario.new(nombre: params[:nombre], email: params[:email], contrasena: 12345)
+      if user.save
+        render json: {status: "Success",message: "Nuevo usuario", data:user},status: :created
+      else
+        render json: {status: "Error", message:user.errors}, status: :bad
+      end
+    end
+  end
+
 end
