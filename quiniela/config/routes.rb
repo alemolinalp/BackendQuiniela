@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     post 'juegos/actualizar', to: 'juegos#actualizar'
     post 'usuarios/seguir', to: 'usuarios#seguir'
     get 'usuarios/equipo', to: 'usuarios#equipo'
+    post 'usuarios/fb', to: 'usuarios#fb'
   end
 
 end
