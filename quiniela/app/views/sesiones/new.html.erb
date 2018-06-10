@@ -1,0 +1,14 @@
+<h1>Inicio de Sesion</h1>
+<p>Quiniela</p>
+
+<% if flash[:error]%>
+<p><%= flash[:error] %></p>
+<% end %>
+
+<%= simple_form_for(:sesion, :url => sesiones_path) do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.button :submit %>
+<%end %>
+
+

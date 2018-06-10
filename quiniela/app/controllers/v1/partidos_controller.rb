@@ -2,7 +2,7 @@ class V1::PartidosController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
-    partidos = Match.all
+    partidos = Match.order(:id).all
     render json: {status: "Success", message: "Éxito ", data: partidos}, status: :ok
   end
 

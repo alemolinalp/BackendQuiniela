@@ -1,0 +1,9 @@
+<h1>Usuarios</h1>
+<p>Quiniela</p>
+
+<%= simple_form_for(@usuario) do |f|%>
+  <%= f.input :nombre%>
+  <%= f.input :email%>
+  <%= f.input :contrasena%>
+  <%= f.button :submit%>
+<% end %>
