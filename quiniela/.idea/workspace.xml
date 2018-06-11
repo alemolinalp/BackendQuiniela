@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e16edb8f-7f88-44d5-8c1e-f6a66d1cd208" name="Default" comment="" />
+    <list default="true" id="e16edb8f-7f88-44d5-8c1e-f6a66d1cd208" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -35,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="juegos_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="juegos_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="346">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -53,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuarios_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="usuarios_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/v1/usuarios_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="754">
               <caret line="106" column="73" lean-forward="true" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="73" />
             </state>
           </provider>
@@ -146,9 +149,9 @@
         <option value="$PROJECT_DIR$/app/helpers/sesiones_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/v1/partidos_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/v1/resultados_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/v1/usuarios_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" />
       </list>
     </option>
   </component>
@@ -335,12 +338,12 @@
       <workItem from="1528476392682" duration="14777000" />
       <workItem from="1528557271541" duration="7247000" />
       <workItem from="1528571149634" duration="5474000" />
-      <workItem from="1528643811416" duration="4509000" />
+      <workItem from="1528643811416" duration="4913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109299000" />
+    <option name="totallyTimeSpent" value="109703000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/resultados_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/equipoxusuario.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -732,10 +728,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/usuarios_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="754">
+          <caret line="106" column="73" lean-forward="true" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/resultados_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -746,10 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/usuarios_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="106" column="73" lean-forward="true" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="73" />
+        <state relative-caret-position="346">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
