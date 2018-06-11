@@ -161,7 +161,14 @@ class V1::JuegosController < ApplicationController
 
       usuariojuegos = Usuarioxjuego.where(idJuego: params[:idQuiniela]).order(:aciertos)
 
-      render json:{status: "Success", message: "Aciertos", data: usuariojuegos, authentication_token: usuario.authentication_token}, status: :ok
+      usuarios = []
+
+      usuariojuegos.each do |item|
+        u = Usuario.where(id: item.idUsuario)
+        usuarios.push(u)
+      end
+
+      render json:{status: "Success", message: "Aciertos", data: usuariojuegos, usuarios: usuarios, authentication_token: usuario.authentication_token}, status: :ok
 
     else
       render json:{status: "Error", message: "Token invalido"}, status: :bad
