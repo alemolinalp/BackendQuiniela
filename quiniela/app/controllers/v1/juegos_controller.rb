@@ -89,7 +89,7 @@ class V1::JuegosController < ApplicationController
 
       render json:{status: "Success", message: "Quinielas del usuario", data: quinielas, authentication_token: usuario.authentication_token}, status: :ok
     else
-      render json:{status: "Error", message: "Token invalido"}, status: :bad
+      render json:{status: "Error", message: "Token invalido"}, status: :ok
     end
   end
 
