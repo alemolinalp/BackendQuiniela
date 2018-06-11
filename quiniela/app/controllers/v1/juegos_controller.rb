@@ -115,7 +115,7 @@ class V1::JuegosController < ApplicationController
         quinielas.push(usuarios)
       end
 
-      render json:{status: "Success", message: "Quinielas del usuario", data: quinielas, authentication_token: usuario.authentication_token}, status: :ok
+      render json:{status: "Success", message: "Usuarios de una quiniela", data: quinielas, authentication_token: usuario.authentication_token}, status: :ok
     else
       render json:{status: "Error", message: "Token invalido"}, status: :bad
     end
@@ -159,7 +159,7 @@ class V1::JuegosController < ApplicationController
 
       end
 
-      usuariojuegos = Usuarioxjuego.where(idJuego: params[:idQuiniela])
+      usuariojuegos = Usuarioxjuego.where(idJuego: params[:idQuiniela]).order(:aciertos)
 
       render json:{status: "Success", message: "Aciertos", data: usuariojuegos, authentication_token: usuario.authentication_token}, status: :ok
 

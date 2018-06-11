@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     get 'equipos/equipo', to: 'equipos#equipo'
     get 'partidos/partidosEquipo', to: 'partidos#partidosEquipo'
     post 'juegos/add', to: 'juegos#add'
-    get 'juegos/obtenerQuinielas', to: 'juegos#obtenerQuinielas'
+    post 'juegos/obtenerQuinielas', to: 'juegos#obtenerQuinielas'
     get 'juegos/obtenerParticipantes', to: 'juegos#obtenerParticipantes'
     get 'resultados/obtenerResultados', to: 'resultados#obtenerResultados'
     post 'partidos/ingresarResultado', to: 'partidos#ingresarResultado'
