@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e16edb8f-7f88-44d5-8c1e-f6a66d1cd208" name="Default" comment="" />
+    <list default="true" id="e16edb8f-7f88-44d5-8c1e-f6a66d1cd208" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="juegos_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="177" column="8" lean-forward="true" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
+            <state relative-caret-position="359">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
             </state>
           </provider>
         </entry>
@@ -127,7 +129,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
@@ -303,12 +305,12 @@
       <workItem from="1528688354107" duration="3541000" />
       <workItem from="1528701821409" duration="1154000" />
       <workItem from="1528733260911" duration="1904000" />
-      <workItem from="1528819227477" duration="2232000" />
+      <workItem from="1528819227477" duration="2790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118778000" />
+    <option name="totallyTimeSpent" value="119336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/v1/juegos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="177" column="8" lean-forward="true" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
+        <state relative-caret-position="359">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
