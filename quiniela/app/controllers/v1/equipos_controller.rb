@@ -7,7 +7,7 @@ class V1::EquiposController < ApplicationController
   end
 
   def grupo
-    equipos = Equipo.where(idGrupo: params[:grupo])
+    equipos = Equipo.where(idGrupo: params[:grupo]).order(:puntos)
     render json: {status: "Success", message: "Éxito ", data: equipos}, status: :ok
   end
 
