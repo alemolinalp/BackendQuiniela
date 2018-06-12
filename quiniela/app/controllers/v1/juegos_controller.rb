@@ -134,16 +134,19 @@ class V1::JuegosController < ApplicationController
       usuario.authentication_token = rand
       usuario.save
 
+
       resultados = ResultadoJuego.where(idJuego: params[:idQuiniela])
 
       lista = []
 
       resultados.each do |item|
         juegousuario = Usuarioxjuego.where(idJuego: params[:idQuiniela]).where(idUsuario: item.idUsuario).first
-        juegousuario.aciertos = 0
-        juegousuario.save
+        if(juegousuario != nil)
+          juegousuario.aciertos = 0
+          juegousuario.save
+          #lista.push(juegousuario)
+        end
       end
-
       resultados.each do |item|
         juegousuario = Usuarioxjuego.where(idJuego: params[:idQuiniela]).where(idUsuario: item.idUsuario).first
 
@@ -152,8 +155,10 @@ class V1::JuegosController < ApplicationController
         if(partido.resultado != 0)
           lista.push(partido)
           if(item.prediccion == partido.resultado)
-            juegousuario.aciertos += 1
-            juegousuario.save
+            if(juegousuario != nil)
+              juegousuario.aciertos += 1
+              juegousuario.save
+            end
           end
         end
 
